@@ -14,6 +14,7 @@ public class Course {
     @Id
     String id;
     String name;
+    Integer credit;     // 学分
 
     String parentId;    // 先修课
 }

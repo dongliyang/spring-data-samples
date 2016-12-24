@@ -15,4 +15,11 @@ public class Student {
     String id;
     String name;
     Integer age;
+
+    public static Student of(String name, Integer age) {
+        Student student = new Student();
+        student.setName(name);
+        student.setAge(age);
+        return student;
+    }
 }
