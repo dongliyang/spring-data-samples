@@ -47,11 +47,8 @@ public class StudentTests {
     @Test
     public void insert() {
         Student newGuy = new Student();
-        newGuy.setAge((int) (Math.random() * 100));
-        String[] names = {"ade", "etty", "ack", "om"};
-        String[] letters = {"B", "C", "D", "J", "W", "T"};
-        String name = letters[(int) (Math.random() * 10) % 6] + names[(int) (Math.random() * 10) % 4];
-        newGuy.setName(name);
+        newGuy.setAge(24);
+        newGuy.setName("William");
         repository.insert(newGuy);
         logger.info("insert: " + newGuy);
     }
@@ -61,7 +58,9 @@ public class StudentTests {
         Student target = Student.of("Winch", null);
         target = repository.findOne(Example.of(target));
         logger.info("findOne: " + target);
-        target.setAge((int) (Math.random() * 100));
+
+        // update
+        target.setAge(22);
         repository.save(target);
         logger.info("afterUpdate: " + target);
     }

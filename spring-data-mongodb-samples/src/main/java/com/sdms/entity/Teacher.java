@@ -14,4 +14,10 @@ public class Teacher {
     @Id
     String id;
     String name;
+
+    public static Teacher of(String name){
+        Teacher teacher = new Teacher();
+        teacher.setName(name);
+        return teacher;
+    }
 }

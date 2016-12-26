@@ -17,4 +17,16 @@ public class Course {
     Integer credit;     // 学分
 
     String parentId;    // 先修课
+
+    public static Course of(String name, int credit) {
+        return of(name, credit, null);
+    }
+
+    public static Course of(String name, int credit, String parentId) {
+        Course course = new Course();
+        course.setName(name);
+        course.setCredit(credit);
+        course.setParentId(parentId);
+        return course;
+    }
 }

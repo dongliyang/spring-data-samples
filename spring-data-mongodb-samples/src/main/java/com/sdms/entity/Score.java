@@ -18,4 +18,13 @@ public class Score {
     String studentId;
     String courseId;
     String teacherId;
+
+    public static Score of(double points, String studentId, String courseId, String teacherId) {
+        Score score = new Score();
+        score.setPoints(points);
+        score.setStudentId(studentId);
+        score.setCourseId(courseId);
+        score.setTeacherId(teacherId);
+        return score;
+    }
 }
